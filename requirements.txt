@@ -9,3 +9,4 @@ Werkzeug
 Jinja2
 itsdangerous
 click
+eventlet>=0.33.0 
