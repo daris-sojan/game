@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style-brian.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+      <h1 class="title">findSitterson(UNC-CS-professors);</h1>
+      <p class="intro">Help—it's been so long since the UNC CS professors have 
+        gone on campus because of COVID that they've forgotten their way to Sitterson! Solve each
+        maze to safely get each professor back to their beloved building.
+      </p>
+      <!-- <script class="maze" src="sketch-kavish.js"></script> -->
+    <!-- <h3>Press space to play</h3> -->
+    <div class="column1">
+      <script src="sketch-bea-brian_attempt.js"></script>
+    </div>
+    <div class="column2">
+      <div class="buttons">
+        <div class="grid-container">
+            <div class="grid-item"></div>
+
+            <div class="grid-item">
+              <button id="upArrow" onclick="moveUp()">
+                &uarr;
+              </button>
+            </div>
+
+            <div class="grid-item"></div>
+
+            <div class="grid-item">
+              <button id="leftArrow" class="horizontal-button" onclick="moveLeft()">
+                  &larr;
+              </button>
+            </div>
+
+            <div class="grid-item"></div>
+
+            <div>
+                <button
+                  id="rightArrow"
+                  class="horizontal-button"
+                  onclick="moveRight()"
+                >
+                  &rarr;
+                </button>
+            </div>
+
+            <div class="grid-item"></div>
+
+            <div class="grid-item">
+              <button id="downArrow" onclick="moveDown()">
+                &darr;
+              </button>
+            </div>
+
+            <div class="grid-item"></div>    
+        </div>
+
+        <div id="other-grid-container">
+          <div class="grid-item-left">
+              <button onclick="previousLevel()">Previous Level</button>
+          </div>
+
+          <div class="grid-item-right">
+              <button onclick="createNewMaze()">New Maze</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <audio id="success" src="./sounds/arcade.wav"></audio>
+  <audio id="fail" src="./sounds/thud.wav"> </audio>
+  </body>
+</html>

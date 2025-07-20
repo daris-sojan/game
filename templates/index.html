@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="shortcut icon" href="#">
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <h1 class="title" title="Game Title">Maze Game</h1>
+  <div class="intro" id="intro">
+    <a href="javascript:void(0);" id="startGameBtn" onclick="loadGame()" type="button">
+      <p>Click here or press <span><bold>space</bold></span> to play!</p>
+    </a>
+  </div>
+  <!-- <script class="maze" src="sketch-kavish.js"></script> -->
+  <!-- <h3>Press space to play</h3> -->
+  <div id="buttons" class="row">
+    <!-- <div class="column">
+      <div></div>
+    </div> -->
+    <div class="column grid-container">
+
+      <p id="level"></p>
+
+      <!-- <div class="grid-container"> -->
+      <br>
+      <!-- Arrow key buttons removed as requested -->
+      <a href="javascript:void(0);" id="play-again" onClick="playAgain()">
+        <p>Play Again</p>
+      </a>
+      <!-- Previous Level and New Maze buttons removed as requested -->
+      <!-- <div id="other-grid-container"> -->
+      <!-- <div class="grid-item-left"></div>
+        <div></div>
+        <div class="vertical-center"></div>
+        <div>
+          <a href="javascript:void(0);" id="play-again" onClick="playAgain()"> Play Again</a>
+        </div> -->
+      <!-- </div> -->
+      <!-- </div> -->
+      <!-- Rules Section -->
+      <div id="rules" style="margin: 30px auto; max-width: 400px; background: #fffbe6; border: 2px solid #ffa500; border-radius: 10px; padding: 20px; font-size: 1.1em; color: #333;">
+        <h2 style="text-align:center; color:#ff9800; margin-top:0;">Rules</h2>
+        <ul style="padding-left: 20px;">
+          <li>Use <b>arrow keys</b> to move up, down, left, and right through the maze.</li>
+          <li>Press <b>Enter</b> to generate a new maze.</li>
+          <li>Press <b>Shift</b> to go to the previous level.</li>
+          <li>Complete 3 mazes to advance to the next level.</li>
+        </ul>
+        <h3 style="color:#ff9800; margin-bottom:0;">Sound Cue</h3>
+        <ul style="padding-left: 20px;">
+          <li><b>Goal sound</b>: As you get closer to the goal, the background music gets louder.</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="column">
+      <div></div>
+    </div>
+  </div>
+  <audio id="success" src="{{ url_for('static', filename='sounds/arcade.wav') }}"></audio>
+  <audio id="fail" src="{{ url_for('static', filename='sounds/thud.wav') }}"> </audio>
+  <audio id="nextlevel" src="{{ url_for('static', filename='sounds/trumpets_fanfare.wav') }}"> </audio>
+  <audio id="ambient" src="{{ url_for('static', filename='sounds/HereComesCarolina.mp3') }}"></audio>
+  <!-- <script src="sketch.js"></script> -->
+  <script src="{{ url_for('static', filename='sketch.min.js') }}"></script>
+  <script>
+    var stickmanPath = "{{ url_for('static', filename='imgs/stickman.png') }}";
+    var goalPath = "{{ url_for('static', filename='imgs/goal.png') }}";
+  </script>
+</body>
+
+</html>
