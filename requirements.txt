@@ -1,0 +1,11 @@
+Flask>=2.0.0
+Flask-SocketIO>=5.0.0
+mediapipe>=0.10.0
+opencv-python>=4.5.0
+numpy>=1.19.0
+python-socketio>=5.0.0
+python-engineio>=4.0.0
+Werkzeug>=2.0.0
+Jinja2>=3.0.0
+itsdangerous>=2.0.0
+click>=8.0.0 
